@@ -86,7 +86,7 @@ download_and_install() {
         TEMP_DIR=$(mktemp -d)
         git clone --depth 1 "$REPO_URL" "$TEMP_DIR" 2>/dev/null || {
             echo -e "${YELLOW}Using fallback download method...${NC}"
-            curl -L "https://github.com/yourusername/gemini-advanced/archive/main.tar.gz" | tar xz -C "$TEMP_DIR" --strip-components=1
+            curl -L "https://github.com/tom28881/gemini-advanced/archive/main.tar.gz" | tar xz -C "$TEMP_DIR" --strip-components=1
         }
         cp -r "$TEMP_DIR/src"/* "$INSTALL_DIR/"
         cp -r "$TEMP_DIR/bin"/* "$INSTALL_DIR/bin/" 2>/dev/null || true
