@@ -1,0 +1,218 @@
+# Gemini Advanced Configuration
+# Similar to Claude Code's comprehensive setup
+
+version: "1.0"
+updated: "2025-06-25"
+
+# Model Configuration
+models:
+  default:
+    name: "gemini-2.5-pro"
+    temperature: 0.7
+    top_p: 0.95
+    top_k: 40
+    max_output_tokens: 8192
+    presence_penalty: 0.0
+    frequency_penalty: 0.0
+    
+  think_hard:
+    name: "gemini-2.5-pro"
+    temperature: 0.3  # Lower for more focused analytical thinking
+    top_p: 0.85
+    top_k: 20
+    max_output_tokens: 16384
+    presence_penalty: 0.1
+    frequency_penalty: 0.1
+    
+  creative:
+    name: "gemini-2.5-pro"
+    temperature: 0.9
+    top_p: 0.98
+    top_k: 60
+    max_output_tokens: 8192
+    presence_penalty: 0.3
+    frequency_penalty: 0.3
+    
+  precise:
+    name: "gemini-2.5-pro"
+    temperature: 0.1
+    top_p: 0.8
+    top_k: 10
+    max_output_tokens: 8192
+    presence_penalty: 0.0
+    frequency_penalty: 0.0
+
+# Thinking Modes (similar to Claude's --think, --think-hard, --ultrathink)
+thinking_modes:
+  normal:
+    depth: "standard"
+    iterations: 1
+    context_search: false
+    validation_required: false
+    
+  think:
+    depth: "detailed"
+    iterations: 2
+    context_search: true
+    validation_required: false
+    system_prompt_addon: |
+      Take time to analyze the problem thoroughly.
+      Consider multiple approaches before deciding.
+      
+  think_hard:
+    depth: "comprehensive"
+    iterations: 3
+    context_search: true
+    validation_required: true
+    system_prompt_addon: |
+      CRITICAL THINKING MODE:
+      1. Analyze the problem from multiple angles
+      2. Consider edge cases and potential issues
+      3. Research unfamiliar concepts before implementing
+      4. Validate assumptions with evidence
+      5. Provide detailed reasoning for decisions
+      
+  ultrathink:
+    depth: "exhaustive"
+    iterations: 5
+    context_search: true
+    validation_required: true
+    system_prompt_addon: |
+      ULTRA ANALYTICAL MODE:
+      1. Decompose the problem into fundamental components
+      2. Analyze each component systematically
+      3. Consider all possible approaches and their trade-offs
+      4. Research best practices and patterns thoroughly
+      5. Validate each step with evidence and testing
+      6. Question every assumption
+      7. Consider long-term implications
+      8. Document reasoning comprehensively
+
+# Memory Configuration
+memory:
+  enabled: true
+  storage_path: "~/.gemini-advanced/memory"
+  max_entries: 10000
+  retention_days: 365
+  auto_summarize: true
+  summary_threshold: 100  # Summarize after N entries
+  
+  categories:
+    - preferences
+    - learned_patterns
+    - project_context
+    - user_corrections
+    - code_style
+    - common_workflows
+    - tool_usage
+
+# Performance Settings
+performance:
+  parallel_processing: true
+  cache_responses: true
+  cache_ttl: 3600  # 1 hour
+  batch_similar_ops: true
+  token_optimization: true
+  context_compression: true
+  
+  # Token economy rules
+  token_economy:
+    minimal_output: true
+    avoid_redundancy: true
+    use_references: true
+    compress_at_threshold: 0.7  # Compress when context > 70%
+
+# Security & Validation
+security:
+  validate_commands: true
+  sandbox_mode: false
+  allowed_directories:
+    - "~/Projects"
+    - "~/Documents"
+    - "/tmp"
+  forbidden_patterns:
+    - "api[_-]?key"
+    - "token"
+    - "secret"
+    - "password"
+    - "credential"
+  require_confirmation:
+    - "rm -rf"
+    - "sudo"
+    - "chmod 777"
+    - "git push --force"
+
+# Integration Features
+integrations:
+  git:
+    auto_status: true
+    smart_commits: true
+    branch_protection: true
+    
+  testing:
+    auto_run: false
+    frameworks:
+      - jest
+      - pytest
+      - mocha
+      - vitest
+      
+  linting:
+    auto_fix: true
+    tools:
+      - eslint
+      - ruff
+      - prettier
+      - black
+
+# Workflow Automation
+workflows:
+  enabled: true
+  auto_detect: true
+  custom_workflows_path: "~/.gemini-advanced/workflows"
+  
+  triggers:
+    file_patterns:
+      "*.test.*": "test_workflow"
+      "*.tsx|*.jsx": "frontend_workflow"
+      "*.py": "python_workflow"
+      "Dockerfile": "devops_workflow"
+      
+    keywords:
+      "bug|error|fix": "debug_workflow"
+      "optimize|performance": "performance_workflow"
+      "refactor|clean": "refactor_workflow"
+      "security|vulnerability": "security_workflow"
+
+# Auto-activation Rules
+auto_activation:
+  personas:
+    file_based:
+      "*.tsx|*.jsx|*.vue": "frontend"
+      "*.sql|*.db": "database"
+      "*.test.*|*.spec.*": "qa"
+      "Dockerfile|*.yml|*.yaml": "devops"
+      "*.md": "documentation"
+      
+    keyword_based:
+      "architecture|design|system": "architect"
+      "bug|debug|error": "analyzer"
+      "security|auth|crypto": "security"
+      "performance|optimize|speed": "performance"
+      "teach|explain|understand": "mentor"
+
+# UI/UX Settings
+ui:
+  theme: "Monokai"
+  syntax_highlighting: true
+  show_line_numbers: true
+  show_token_usage: true
+  show_thinking_process: false
+  notifications: true
+  
+# Experimental Features
+experimental:
+  multi_agent_mode: false
+  async_thinking: true
+  predictive_assistance: true
+  context_awareness_v2: true

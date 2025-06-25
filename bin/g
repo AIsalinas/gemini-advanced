@@ -3,12 +3,12 @@
 
 prompt="$*"
 
-# If no prompt, launch interactive mode
+# Pokud není prompt, spusť interaktivní režim
 if [[ -z "$prompt" ]]; then
-    echo "🚀 Gemini Advanced - Interactive mode"
+    echo "🚀 Gemini Advanced - Interaktivní režim"
     echo "Thinking mode: normal"
     gemini
 else
-    # Call Gemini with prompt
+    # Volej Gemini s promptem
     gemini --prompt "$prompt"
 fi

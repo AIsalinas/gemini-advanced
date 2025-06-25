@@ -1,0 +1,27 @@
+#!/bin/bash
+# Gemini Advanced - Think Hard mode
+
+prompt="$*"
+
+# Pokud není prompt, spusť interaktivní režim
+if [[ -z "$prompt" ]]; then
+    echo "🚀 Gemini Advanced - Interaktivní režim"
+    echo "🧠🧠 Think-hard mode activated"
+    gemini
+else
+    echo "🧠🧠 Think-hard mode activated"
+    # Přidej think hard mode instrukce
+    enhanced_prompt="[THINK HARD MODE - Critical thinking required. 
+1. Analyze the problem from multiple angles
+2. Consider edge cases and potential issues  
+3. Research unfamiliar concepts thoroughly
+4. Validate assumptions with evidence
+5. Provide detailed reasoning for all decisions
+6. Question obvious solutions and look deeper
+Take your time to think through this comprehensively before responding.] 
+
+$prompt"
+    
+    # Volej Gemini s vylepšeným promptem
+    gemini --prompt "$enhanced_prompt"
+fi

@@ -1,0 +1,32 @@
+#!/bin/bash
+# Gemini Advanced - Ultra Think mode
+
+prompt="$*"
+
+# Pokud není prompt, spusť interaktivní režim
+if [[ -z "$prompt" ]]; then
+    echo "🚀 Gemini Advanced - Interaktivní režim"
+    echo "🧠🧠🧠 Ultra-think mode activated"
+    gemini
+else
+    echo "🧠🧠🧠 Ultra-think mode activated"
+    # Přidej ultra think mode instrukce
+    enhanced_prompt="[ULTRA THINK MODE - Exhaustive analysis required.
+1. Decompose the problem into fundamental components
+2. Analyze each component systematically and thoroughly
+3. Consider ALL possible approaches and their trade-offs
+4. Research best practices and patterns comprehensively
+5. Validate each step with concrete evidence and testing
+6. Question every assumption - assume nothing
+7. Consider long-term implications and edge cases
+8. Document your reasoning process step by step
+9. Explore alternative solutions even if one seems obvious
+10. Think about scalability, security, and maintainability
+
+This is the highest level of analytical thinking. Take significant time to think through every aspect before responding.]
+
+$prompt"
+    
+    # Volej Gemini s vylepšeným promptem
+    gemini --prompt "$enhanced_prompt"
+fi

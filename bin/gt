@@ -1,0 +1,18 @@
+#!/bin/bash
+# Gemini Advanced - Think mode
+
+prompt="$*"
+
+# Pokud není prompt, spusť interaktivní režim
+if [[ -z "$prompt" ]]; then
+    echo "🚀 Gemini Advanced - Interaktivní režim"
+    echo "🧠 Think mode activated"
+    gemini
+else
+    echo "🧠 Think mode activated"
+    # Přidej think mode instrukce
+    enhanced_prompt="[THINK MODE - Take time to analyze thoroughly. Consider multiple approaches and implications before responding. Break down complex problems systematically.] $prompt"
+    
+    # Volej Gemini s vylepšeným promptem
+    gemini --prompt "$enhanced_prompt"
+fi

@@ -1,0 +1,45 @@
+#!/bin/bash
+# Gemini Advanced - Help
+
+cat << 'EOF'
+🚀 Gemini Advanced - Vylepšený Gemini CLI
+
+THINKING MODES:
+  g <prompt>           Základní režim
+  gt <prompt>          Think mode (podrobná analýza)
+  gth <prompt>         Think-hard mode (hluboká analýza)
+  gu <prompt>          Ultra-think mode (vyčerpávající analýza)
+
+PERSONAS:
+  g.arch <prompt>      Systémový architekt (design, škálovatelnost)
+  g.front <prompt>     Frontend vývojář (UI/UX, komponenty)
+  g.back <prompt>      Backend vývojář (API, databáze)
+  g.debug <prompt>     Analyzátor (debugging, root cause)
+  g.sec <prompt>       Security expert (bezpečnost, hrozby)
+  g.perf <prompt>      Performance expert (optimalizace)
+  g.qa <prompt>        QA inženýr (testování, kvalita)
+  g.teach <prompt>     Mentor (výuka, vysvětlení)
+
+INTERAKTIVNÍ REŽIM:
+  Spusťte jakýkoliv příkaz bez parametrů pro interaktivní režim
+
+PŘÍKLADY:
+  g "jak implementovat autentizaci"
+  gt "analyzuj tuto chybu: undefined reference"
+  gth "navrhni škálovatelnou architekturu"
+  gu "kompletní bezpečnostní audit kódu"
+  
+  g.arch "navrhni mikroslužby pro e-shop"
+  g.front "vytvoř responzivní navigaci"
+  g.back "optimalizuj databázový dotaz"
+  g.debug "proč API vrací 500 chyby?"
+  g.sec "zkontroluj SQL injection zranitelnosti"
+  g.teach "vysvětli dependency injection"
+
+INSTALACE:
+  Příkazy jsou již nainstalovány v: ~/.gemini-advanced/bin/
+  Ujistěte se, že máte tuto cestu v PATH:
+    export PATH="$HOME/.gemini-advanced/bin:$PATH"
+
+Pro více informací: https://github.com/your-username/gemini-advanced
+EOF
