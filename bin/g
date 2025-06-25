@@ -1,0 +1,14 @@
+#!/bin/bash
+# Gemini Advanced - Basic mode
+
+prompt="$*"
+
+# If no prompt, launch interactive mode
+if [[ -z "$prompt" ]]; then
+    echo "🚀 Gemini Advanced - Interactive mode"
+    echo "Thinking mode: normal"
+    gemini
+else
+    # Call Gemini with prompt
+    gemini --prompt "$prompt"
+fi

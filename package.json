@@ -1,0 +1,44 @@
+{
+  "name": "gemini-advanced",
+  "version": "1.0.0",
+  "description": "Enhanced AI assistant for Google Gemini CLI with thinking modes and personas",
+  "main": "index.js",
+  "bin": {
+    "gemini-advanced-install": "./install.sh"
+  },
+  "scripts": {
+    "postinstall": "./install.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/gemini-advanced.git"
+  },
+  "keywords": [
+    "gemini",
+    "ai",
+    "cli",
+    "assistant",
+    "google",
+    "thinking-modes",
+    "personas",
+    "enhanced",
+    "productivity"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/gemini-advanced/issues"
+  },
+  "homepage": "https://github.com/yourusername/gemini-advanced#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "peerDependencies": {
+    "@google/gemini-cli": "*"
+  }
+}
