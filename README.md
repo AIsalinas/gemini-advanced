@@ -29,14 +29,14 @@ Transform Google's Gemini CLI into a powerful AI assistant with thinking modes, 
 ### Quick Install (Recommended)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/gemini-advanced/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/tom28881/gemini-advanced/main/install.sh | bash
 ```
 
 ### Manual Install
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/gemini-advanced.git
+git clone https://github.com/tom28881/gemini-advanced.git
 cd gemini-advanced
 
 # Run installer
@@ -204,5 +204,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <p align="center">
   Made with ❤️ by the community
   <br>
-  <a href="https://github.com/yourusername/gemini-advanced/stargazers">⭐ Star us on GitHub!</a>
+  <a href="https://github.com/tom28881/gemini-advanced/stargazers">⭐ Star us on GitHub!</a>
 </p>

@@ -12,7 +12,7 @@ NC='\033[0m' # No Color
 
 # Configuration
 INSTALL_DIR="$HOME/.gemini-advanced"
-REPO_URL="https://github.com/yourusername/gemini-advanced.git"
+REPO_URL="https://github.com/tom28881/gemini-advanced.git"
 VERSION="1.0.0"
 
 # Functions
