@@ -197,7 +197,7 @@ print_success() {
     echo "   gu 'Design payment system'    # Exhaustive analysis"
     echo "   g.debug 'Why API fails'       # Debug persona"
     echo
-    echo "📚 Full documentation: https://github.com/yourusername/gemini-advanced"
+    echo "📚 Full documentation: https://github.com/tom28881/gemini-advanced"
     echo
 }
 
