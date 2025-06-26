@@ -191,12 +191,36 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Task management is terminal-only
 - Some features require macOS/Linux
 
-## 🚦 Roadmap
+## 🚦 Roadmap 2025
 
-- [ ] Windows native support
-- [ ] Memory persistence in Gemini CLI
-- [ ] Custom model parameters
-- [ ] Plugin system
+### Q1 2025 - Core Enhancements
+- [ ] **File System Integration** - Read/edit files with AI assistance
+- [ ] **Persistent Memory** - Context that survives between sessions  
+- [ ] **Command Execution** - Safe sandboxed command running
+- [ ] **Czech Language Support** - Native český mód 🇨🇿
+
+### Q2 2025 - Developer Experience
+- [ ] **IDE Plugins** - VS Code, JetBrains, Neovim
+- [ ] **Git Integration** - Smart commits, PR generation
+- [ ] **Multi-Model Support** - Switch between Gemini models
+- [ ] **Real-time Collaboration** - Pair programming with AI
+
+### Q3 2025 - Advanced Features  
+- [ ] **Visual Understanding** - Screenshot debugging
+- [ ] **Voice Coding** - Code in Czech or English
+- [ ] **Autonomous Agents** - Background monitoring & fixes
+- [ ] **Performance Profiling** - AI-powered optimization
+
+### Experimental (try now!)
+```bash
+# Install experimental features
+bash ~/.gemini-advanced/src/experimental/file-reader.sh
+
+# Then try:
+g.read package.json          # Read and analyze files
+g.analyze "*.js" "find bugs" # Analyze multiple files
+g.edit config.json "add debug mode" # Preview AI edits
+```
 - [ ] Web UI
 
 ---
